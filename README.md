@@ -100,11 +100,11 @@ source ~/.bashrc
 
 ---
 
-## Install Project Dependencies
+# Install Project Dependencies
 
 This project only needs the ROS 2, Gazebo, Nav2, SLAM Toolbox, bridge, and MAVSDK packages used by the launch files.
 
-### ROS 2 Jazzy packages
+## ROS 2 Jazzy packages
 
 ```bash
 sudo apt update
@@ -128,7 +128,7 @@ sudo apt install -y \
   python3-pip
 ```
 
-### MAVSDK Python for `cmd_vel_to_px4.py`
+## MAVSDK Python for `cmd_vel_to_px4.py`
 
 ```bash
 cd ~/unknown_px4_ws
