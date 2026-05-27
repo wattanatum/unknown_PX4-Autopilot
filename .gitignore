@@ -22,5 +22,7 @@ venv/
 *.bag
 *.ulg
 
+assets/*
+
 src/cmd
 src/unknown_px4_mapping/unknown_px4_mapping/mapping_cmd
