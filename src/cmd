@@ -1,0 +1,17 @@
+cd ~/PX4-Autopilot
+make px4_sitl gz_x500_lidar_2d
+PX4_GZ_WORLD=outdoor_slam_test make px4_sitl gz_x500_lidar_2d
+
+cd ~/Downloads
+./QGroundControl-x86_64.AppImage
+
+cd ~/Micro-XRCE-DDS-Agent
+./build/MicroXRCEAgent udp4 -p 8888
+
+cd ~/unknown_px4_ws
+source ~/unknown_px4_ws/mavsdk_env/bin/activate
+
+commander takeoff
+commander land
+
+
