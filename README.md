@@ -749,3 +749,8 @@ local_costmap:
 
 ---
 
+## Author
+
+Kasiphat Uppaphak  
+GitHub: [wattanatum](https://github.com/wattanatum)
+
