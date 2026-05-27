@@ -209,7 +209,7 @@ ros2 run tf2_ros tf2_echo base_link link
 
 ---
 
-# Method 3: Check Gazebo Bridge Topics
+# Check Gazebo Bridge Topics
 
 Check `/clock`:
 
@@ -237,7 +237,7 @@ ros2 topic list
 
 ---
 
-# Method 4: SLAM Toolbox Mapping
+# SLAM Toolbox Mapping
 
 Use this method when creating a new map.
 
