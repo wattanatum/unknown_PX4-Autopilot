@@ -21,3 +21,6 @@ venv/
 *.mcap
 *.bag
 *.ulg
+
+src/cmd
+src/unknown_px4_mapping/unknown_px4_mapping/mapping_cmd
