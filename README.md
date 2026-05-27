@@ -1,5 +1,9 @@
 # unknown_PX4-Autopilot
 
+<p align="center">
+  <img src="assets/drone_filght.gif" alt="PX4 Drone Flight Demo" width="700"/>
+</p>
+
 PX4 drone simulation project using **ROS 2 Jazzy**, **Gazebo Harmonic**, **SLAM Toolbox**, and **Nav2**.
 
 This project demonstrates:
