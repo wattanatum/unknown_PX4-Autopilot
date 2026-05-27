@@ -17,12 +17,6 @@ This project demonstrates:
 
 ---
 
-## Project Description
-
-PX4 drone simulation with SLAM Toolbox and Nav2 using ROS 2 Jazzy and Gazebo Harmonic.
-
----
-
 ## System Requirements
 
 Tested with:
