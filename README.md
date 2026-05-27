@@ -63,8 +63,7 @@ unknown_px4_ws/
         │   └── px4_slam_toolbox.launch.py
         ├── maps/
         │   ├── outdoor_px4_slam_map.yaml
-        │   ├── outdoor_px4_slam_map.pgm
-        │   └── outdoor_px4_slam_map_2.pgm
+        │   └── outdoor_px4_slam_map.pgm
         ├── package.xml
         ├── setup.py
         └── unknown_px4_mapping/
@@ -74,7 +73,7 @@ unknown_px4_ws/
 
 ---
 
-# 1. Clone This Repository
+# Clone This Repository
 
 ```bash
 cd ~
@@ -84,7 +83,7 @@ cd ~/unknown_px4_ws
 
 ---
 
-# 2. Build ROS 2 Workspace
+# Build ROS 2 Workspace
 
 ```bash
 cd ~/unknown_px4_ws
@@ -101,7 +100,7 @@ source ~/.bashrc
 
 ---
 
-# 3. Install PX4-Autopilot
+# Install PX4-Autopilot
 
 PX4-Autopilot must be cloned separately.
 
@@ -116,7 +115,7 @@ After installation, reboot if PX4 setup asks you to.
 
 ---
 
-# 4. Copy Custom Gazebo World to PX4
+# Copy Custom Gazebo World to PX4
 
 This repository includes a custom Gazebo world:
 
@@ -139,7 +138,7 @@ ls ~/PX4-Autopilot/Tools/simulation/gz/worlds | grep outdoor_slam_test
 
 ---
 
-# 5. Method 1: Run PX4 Gazebo Simulation
+# Run PX4 Gazebo Simulation
 
 Use this when starting the PX4 drone simulation.
 
@@ -159,7 +158,7 @@ Keep this terminal running.
 
 ---
 
-# 6. Method 2: Run ROS 2 Bridge, Odometry, and TF
+# Run ROS 2 Bridge, Odometry, and TF
 
 Open a new terminal:
 
@@ -210,7 +209,7 @@ ros2 run tf2_ros tf2_echo base_link link
 
 ---
 
-# 7. Method 3: Check Gazebo Bridge Topics
+# Method 3: Check Gazebo Bridge Topics
 
 Check `/clock`:
 
@@ -238,7 +237,7 @@ ros2 topic list
 
 ---
 
-# 8. Method 4: SLAM Toolbox Mapping
+# Method 4: SLAM Toolbox Mapping
 
 Use this method when creating a new map.
 
@@ -280,7 +279,7 @@ Open RViz2 config in this path:
 
 ---
 
-# 9. Method 5: Save SLAM Map
+# Save SLAM Map
 
 After mapping, save the map:
 
@@ -306,7 +305,7 @@ source install/setup.bash
 
 ---
 
-# 10. Method 6: Nav2 Saved-Map Navigation
+# Nav2 Saved-Map Navigation
 
 Use this method after a map has already been created.
 
@@ -369,7 +368,7 @@ Open RViz2 config in this path:
 
 ---
 
-# 11. Method 7: Check Nav2 Lifecycle
+# Check Nav2 Lifecycle
 
 Check if Nav2 nodes are active:
 
@@ -390,7 +389,7 @@ active [3]
 
 ---
 
-# 12. Method 8: Check Nav2 TF Tree
+# Check Nav2 TF Tree
 
 Nav2 requires:
 
@@ -424,7 +423,7 @@ Notes:
 
 ---
 
-# 13. Method 9: Check Important ROS 2 Topics
+# Check Important ROS 2 Topics
 
 Check map:
 
@@ -464,7 +463,7 @@ ros2 topic echo /world/outdoor_slam_test/model/x500_lidar_2d_0/link/link/sensor/
 
 ---
 
-# 14. Method 10: Run `cmd_vel_to_px4.py` Directly
+# Run `cmd_vel_to_px4.py` Directly
 
 Normally use the launch file:
 
@@ -506,7 +505,7 @@ python3 ~/unknown_px4_ws/src/unknown_px4_mapping/unknown_px4_mapping/cmd_vel_to_
 
 ---
 
-# 15. Method 11: Manual Static TF
+# Manual Static TF
 
 If `base_link -> link` is missing:
 
@@ -519,7 +518,7 @@ ros2 run tf2_ros static_transform_publisher \
 
 ---
 
-# 16. Method 12: Manual Bridge Command
+# Manual Bridge Command
 
 Normally use:
 
@@ -548,7 +547,7 @@ ros2 run unknown_px4_mapping dynamic_pose_to_odom \
 
 ---
 
-# 17. Method 13: Troubleshooting
+# Troubleshooting
 
 ## Problem: `/odom` does not publish
 
