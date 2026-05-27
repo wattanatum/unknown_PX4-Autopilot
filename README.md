@@ -100,6 +100,47 @@ source ~/.bashrc
 
 ---
 
+## Install Project Dependencies
+
+This project only needs the ROS 2, Gazebo, Nav2, SLAM Toolbox, bridge, and MAVSDK packages used by the launch files.
+
+### ROS 2 Jazzy packages
+
+```bash
+sudo apt update
+
+sudo apt install -y \
+  ros-jazzy-ros-gz-bridge \
+  ros-jazzy-ros-gz-sim \
+  ros-jazzy-slam-toolbox \
+  ros-jazzy-navigation2 \
+  ros-jazzy-nav2-bringup \
+  ros-jazzy-tf2-ros \
+  ros-jazzy-tf2-tools \
+  ros-jazzy-rviz2 \
+  ros-jazzy-nav-msgs \
+  ros-jazzy-geometry-msgs \
+  ros-jazzy-sensor-msgs \
+  ros-jazzy-tf2-msgs \
+  python3-colcon-common-extensions \
+  python3-rosdep \
+  python3-venv \
+  python3-pip
+```
+
+### MAVSDK Python for `cmd_vel_to_px4.py`
+
+```bash
+cd ~/unknown_px4_ws
+python3 -m venv mavsdk_ros_env
+source ~/unknown_px4_ws/mavsdk_ros_env/bin/activate
+pip install --upgrade pip
+pip install mavsdk
+deactivate
+```
+
+---
+
 # Install PX4-Autopilot
 
 PX4-Autopilot must be cloned separately.
