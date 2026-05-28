@@ -279,7 +279,7 @@ ros2 topic list
 # SLAM Toolbox Mapping
 
 <p align="center">
-  <img src="assets/4_mapping.gif" alt="PX4 Drone mapping" width="700"/>
+  <img src="assets/px4_mapping.gif" alt="PX4 Drone mapping" width="700"/>
 </p>
 
 Use this method when creating a new map.
