@@ -22,14 +22,5 @@ venv/
 *.bag
 *.ulg
 
-# Ignore all files inside assets
-assets/*
-
-# Allow selected GIF files for README
-!assets/
-!assets/drone_filght.gif
-!assets/px4_nav2.gif
-!assets/px4_slam_toolbox.gif
-
 src/cmd
 src/unknown_px4_mapping/unknown_px4_mapping/mapping_cmd

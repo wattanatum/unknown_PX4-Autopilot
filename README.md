@@ -279,35 +279,41 @@ ros2 topic list
 # SLAM Toolbox Mapping
 
 <p align="center">
-  <img src="assets/px4_slam_toolbox.gif" alt="PX4 Drone mapping" width="700"/>
+  <img src="assets/4_mapping.gif" alt="PX4 Drone mapping" width="700"/>
 </p>
 
 Use this method when creating a new map.
 
 Do **not** run Nav2 saved-map navigation at the same time as SLAM Toolbox.
 
-## Terminal 1: PX4 Gazebo
+## Terminal 1: Launch PX4 Gazebo
 
 ```bash
 cd ~/PX4-Autopilot
 PX4_GZ_WORLD=outdoor_slam_test make px4_sitl gz_x500_lidar_2d
 ```
 
-## Terminal 2: SLAM Toolbox
+## Terminal 2: Launch SLAM Toolbox
 
 ```bash
 source ~/unknown_px4_ws/install/setup.bash
 ros2 launch unknown_px4_mapping px4_slam_toolbox.launch.py
 ```
 
-## Terminal 3: PX4 `/cmd_vel` Controller
+## Terminal 3: Launch Nav2
+```bash
+source ~/unknown_px4_ws/install/setup.bash
+ros2 launch unknown_px4_mapping px4_nav2.launch.py
+```
+
+## Terminal 4: Launch PX4 `/cmd_vel` Controller
 
 ```bash
 source ~/unknown_px4_ws/install/setup.bash
 ros2 launch unknown_px4_mapping px4_cmd_vel_to_px4.launch.py
 ```
 
-## Terminal 4: RViz2
+## Terminal 5: Run RViz2
 
 ```bash
 source ~/unknown_px4_ws/install/setup.bash
@@ -358,14 +364,14 @@ Use this method after a map has already been created.
 
 Do **not** run SLAM Toolbox when using saved-map navigation.
 
-## Terminal 1: PX4 Gazebo
+## Terminal 1: Launch PX4 Gazebo
 
 ```bash
 cd ~/PX4-Autopilot
 PX4_GZ_WORLD=outdoor_slam_test make px4_sitl gz_x500_lidar_2d
 ```
 
-## Terminal 2: Bridge, Odometry, and TF
+## Terminal 2: Launch Bridge, Odometry, and TF
 
 ```bash
 source ~/unknown_px4_ws/install/setup.bash
@@ -379,7 +385,7 @@ ros2 topic echo /odom --once
 ros2 run tf2_ros tf2_echo odom base_link
 ```
 
-## Terminal 3: Nav2 with Saved Map
+## Terminal 3: Launch Nav2 with Saved Map
 
 ```bash
 source ~/unknown_px4_ws/install/setup.bash
@@ -393,14 +399,14 @@ config/nav2_map_params.yaml
 maps/outdoor_px4_slam_map.yaml
 ```
 
-## Terminal 4: PX4 `/cmd_vel` Controller
+## Terminal 4: Launch PX4 `/cmd_vel` Controller
 
 ```bash
 source ~/unknown_px4_ws/install/setup.bash
 ros2 launch unknown_px4_mapping px4_cmd_vel_to_px4.launch.py
 ```
 
-## Terminal 5: RViz2
+## Terminal 5: Run RViz2
 
 ```bash
 source ~/unknown_px4_ws/install/setup.bash
