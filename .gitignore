@@ -24,3 +24,4 @@ venv/
 
 src/cmd
 src/unknown_px4_mapping/unknown_px4_mapping/mapping_cmd
+src/px4_msgs/
