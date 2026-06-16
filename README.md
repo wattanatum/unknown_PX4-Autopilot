@@ -1,7 +1,7 @@
 # unknown_PX4-Autopilot
 
 <p align="center">
-  <img src="assets/drone_filght.gif" alt="PX4 Drone Flight" width="700"/>
+  <img src="assets/drone_filght.gif" alt="PX4 Drone Flight" width="850"/>
 </p>
 
 PX4 drone simulation project using **ROS 2 Jazzy**, **Gazebo Harmonic**, **SLAM Toolbox**, and **Nav2**.
@@ -279,7 +279,7 @@ ros2 topic list
 # SLAM Toolbox Mapping
 
 <p align="center">
-  <img src="assets/px4_mapping.gif" alt="PX4 Drone mapping" width="700"/>
+  <img src="assets/px4_mapping.gif" alt="PX4 Drone mapping" width="850"/>
 </p>
 
 Use this method when creating a new map.
@@ -357,7 +357,7 @@ source install/setup.bash
 # Nav2 Saved-Map Navigation
 
 <p align="center">
-  <img src="assets/px4_nav2.gif" alt="PX4 Drone navigation" width="700"/>
+  <img src="assets/px4_nav2.gif" alt="PX4 Drone navigation" width="850"/>
 </p>
 
 Use this method after a map has already been created.
